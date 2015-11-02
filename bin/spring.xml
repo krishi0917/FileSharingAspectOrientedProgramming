@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:aop="http://www.springframework.org/schema/aop"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd 
+    http://www.springframework.org/schema/aop 
+    http://www.springframework.org/schema/aop/spring-aop-3.0.xsd ">
+
+   <!-- bean definition & AOP specific configuration -->
+   <aop:aspectj-autoproxy />
+
+	<bean id="Alice" class="edu.sjsu.cmpe275.lab1.User" scope="singleton">
+		<property name="userId" value="Alice"> </property>
+	</bean>
+	
+	<bean id="Bob" class="edu.sjsu.cmpe275.lab1.User" scope="singleton">
+		<property name="userId" value="Bob"> </property>
+	</bean>
+	
+	<bean id="Carl" class="edu.sjsu.cmpe275.lab1.User" scope="singleton">
+		<property name="userId" value="Carl"> </property>
+	</bean>
+	
+	<bean id="FileService" class="edu.sjsu.cmpe275.lab1.FileService">
+	
+	</bean>
+	
+	<bean id="LoggingAspect" class="edu.sjsu.cmpe275.lab1.LoggingAspect" />
+</beans>
